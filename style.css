@@ -1,0 +1,61 @@
+html, body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: hsl(218, 23%, 16%);
+    margin-top:0;
+    margin-left:0;
+    
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    height: 90vh;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    gap:20px;
+    width: 550px;
+    height: 320px;
+    padding:10px;
+
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px hsl(218, 23%, 16%) ;
+    
+}
+#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: hsl(150, 100%, 66%);
+    left: 932px;
+    bottom: 363px;
+    border-radius: 25px;
+    height: 45px;
+    width: 45px;
+    border-style: none;
+}
+
+#btn:active {
+    box-shadow: 1px 1px 10px hsl(150, 100%, 66%) ;
+}
+
+img[alt='linebreaker'] {
+    width: 300px;
+}
+#quote_id {
+    color: hsl(150, 100%, 66%);
+}
+#quote {
+    color:hsl(193, 38%, 86%);
+    font-size: 28px;
+    font-weight: 800;
+}
