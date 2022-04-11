@@ -22,7 +22,7 @@ html, body {
     margin: 0 auto;
     gap:20px;
     width: 550px;
-    height: 320px;
+    height: 300px;
     padding:10px;
 
     background-color: hsl(217, 19%, 24%);
@@ -31,16 +31,17 @@ html, body {
     
 }
 #btn{
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     background-color: hsl(150, 100%, 66%);
-    left: 932px;
-    bottom: 363px;
+    left: 48.5vw;
+    top: 550px;
+
     border-radius: 25px;
-    height: 45px;
-    width: 45px;
+    height: 55px;
+    width: 55px;
     border-style: none;
 }
 
@@ -58,4 +59,8 @@ img[alt='linebreaker'] {
     color:hsl(193, 38%, 86%);
     font-size: 28px;
     font-weight: 800;
+}
+
+@media only screen and (max-device-width) {
+    
 }

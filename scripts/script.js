@@ -10,7 +10,7 @@ async function getAdvice() {
     });
     const data = await response.json();
     const { advice, id } = data.slip
-    document.getElementById('quote').textContent = advice; 
+    document.getElementById('quote').textContent = "'" + advice + "'"; 
     document.getElementById('quote_id').textContent = "Advice #"+ id;
 }
 getAdvice();
