@@ -15,7 +15,7 @@ html, body {
 }
 #content{
     display: flex;
-    flex:0 0 auto;
+    flex: 0 1 auto;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
