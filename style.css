@@ -49,9 +49,9 @@ html, body {
 }
 
 img[alt='linebreaker'] {
-    position: relative;
+    position: fixed;
     flex-grow: 0;
-    top:40px;
+    top:55vh;
     width: 300px;
 }
 #quote_id {
