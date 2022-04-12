@@ -51,8 +51,8 @@ html, body {
 img[alt='linebreaker'] {
     position: fixed;
     flex-grow: 0;
-    top:55vh;
-    width: 300px;
+    top:57vh;
+    width: 285px;
 }
 #quote_id {
     position: relative;
