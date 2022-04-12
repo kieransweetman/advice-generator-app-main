@@ -24,7 +24,7 @@ Users should be able to:
 
 ### What I learned
 
-By learning how to fetch data using an APi like Fetch, I now have a better understanding of the basics HTTP requests. Using an asynchronous function and changing the default cache setting to 'no-cache', I was able to generate a new 'GET' request on the click of the button. Generating a new request was the biggest technical hurdle of this project. 
+By learning how to fetch data using an APi like Fetch, I now have a better understanding of the basics of HTTP requests. Using an asynchronous function and changing the default cache setting to 'no-cache', I was able to generate a new 'GET' request on the click of the button. Generating a new request was the biggest technical hurdle of this project. 
 
 Moving on to the styling of the page, I had some problems with centering my app and the positioning of certain elements. The button position is relative to the 'form' tag to offset it from the rest of app.  Doing this allowed me to fix it to the bottome of the box and give the card a more cohesive and unique look. 
 
@@ -37,7 +37,8 @@ The 3 examples are below (not in order when mentioned)
         </button>
       </form>
 ```
-```#btn{
+```
+#btn {
     position: relative;
     display: flex;
     padding: 10px;
@@ -58,14 +59,15 @@ async function getAdvice() {
         cache: 'no-cache',
         credentials: 'omit'
     });
-}
+    const data = await response.json();
+    const { advice, id } = data.slip
 ```
 
 ### Continued development
 
 This project highlighted a few areas to work on: positioning of elements, 'GET' and 'POST' requests using Fetch, and general planning strategies when working on projects. I had estimated that this would take about a day (took about a day and a half).
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Next steps will be to incorporate a framework like ReactJs to make usuable and scalable components. 
 
 ### Useful resources
 
