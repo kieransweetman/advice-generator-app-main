@@ -3,7 +3,7 @@
 
 async function getAdvice() {
     const api_url = "https://api.adviceslip.com/advice"
-    const response = await window.fetch(api_url, {
+    const response = await fetch(api_url, {
         method: 'GET',
         cache: 'no-cache',
         credentials: 'omit'
