@@ -1,90 +1,79 @@
 ## Overview
 
+To get a better idea on how to use Request in a modern context, I tasked myself to make a simple web application using an API by fetching and parsing the requested data. 
+I also wanted to check my CSS skills, making sure I can proprely incorporate a design choice (Here, they asked to match the design of the app). 
+I ran into a few problems structuring the flow of my page, but all in all, an easy and helpful first step to understanding 'GET' and 'POST' methods and calling my data asyncronsouly. 
+
 ### The challenge
 
 Users should be able to:
 
-- 
+- Generate useful and witty life advice on the click of the button (desktop and mobile)
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/kieransweetman/advice-generator-app-main]
+- Live Site URL: [https://kieransweetman.github.io/advice-generator-app-main/]
 
 ## My process
 
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Having no experience calling an API, I first started learning and experimenting with async functions and familiarizing myself with the Fetch API documentation
+- After getting a good understanding, I wrote a simple function that gets the json data, and updates the DOM evertime the user clicks the bottom button. 
+- I moved on to the HTML and CSS to structure and design the web app according to the challenge, using the style guidelines frontendmentors.com provides. 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+By learning how to fetch data using an APi like Fetch, I now have a better understanding of the basics HTTP requests. Using an asynchronous function and changing the default cache setting to 'no-cache', I was able to generate a new 'GET' request on the click of the button. Generating a new request was the biggest technical hurdle of this project. 
 
-To see how you can add code snippets, see below:
+Moving on to the styling of the page, I had some problems with centering my app and the positioning of certain elements. The button position is relative to the 'form' tag to offset it from the rest of app.  Doing this allowed me to fix it to the bottome of the box and give the card a more cohesive and unique look. 
+
+The 3 examples are below (not in order when mentioned)
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+       <form> 
+        <button type="button" id = "btn" onclick = 'getAdvice()'>
+            <img src="./images/icon-dice.svg" alt="button" name = 'dice'>
+        </button>
+      </form>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```#btn{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    top:30px;
+    
+   
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 25px;
+    border-style: none;
+    
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+async function getAdvice() {
+    const api_url = "https://api.adviceslip.com/advice"
+    const response = await fetch(api_url, {
+        method: 'GET',
+        cache: 'no-cache',
+        credentials: 'omit'
+    });
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+This project highlighted a few areas to work on: positioning of elements, 'GET' and 'POST' requests using Fetch, and general planning strategies when working on projects. I had estimated that this would take about a day (took about a day and a half).
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API] - Classic MDN on Fetch
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
-## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
