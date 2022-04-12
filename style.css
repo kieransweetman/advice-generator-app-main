@@ -60,6 +60,8 @@ img[alt='linebreaker'] {
     color: hsl(150, 100%, 66%);
 }
 #quote {
+    position: relative;
+    bottom: 2vh;
     color:hsl(193, 38%, 86%);
     font-size: 28px;
     font-weight: 800;
