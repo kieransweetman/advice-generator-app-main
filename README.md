@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/kieransweetman/advice-generator-app-main]
+- Solution URL: [https://www.frontendmentor.io/solutions/quote-generator-using-fetch-BJE5qzzNq]
 - Live Site URL: [https://kieransweetman.github.io/advice-generator-app-main/]
 
 ## My process
